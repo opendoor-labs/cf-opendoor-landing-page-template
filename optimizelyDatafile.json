@@ -1,0 +1,70 @@
+{
+  "version": "4",
+  "rollouts": [],
+  "typedAudiences": [],
+  "anonymizeIP": false,
+  "variables": [],
+  "featureFlags": [],
+  "experiments": [
+    {
+      "status": "Running",
+      "audienceIds": [],
+      "variations": [
+        { "variables": [], "id": "17886150268", "key": "control" },
+        { "variables": [], "id": "17897170788", "key": "treatment" }
+      ],
+      "id": "17872570519",
+      "key": "landing_page_infra_test",
+      "layerId": "17868840146",
+      "trafficAllocation": [
+        { "entityId": "17886150268", "endOfRange": 5000 },
+        { "entityId": "17897170788", "endOfRange": 10000 }
+      ],
+      "forcedVariations": {}
+    },
+    {
+      "status": "Running",
+      "audienceIds": [],
+      "variations": [
+        { "variables": [], "id": "17870130722", "key": "control" },
+        { "variables": [], "id": "17889461904", "key": "treatment" }
+      ],
+      "id": "17885711732",
+      "key": "landing_page_variation_test",
+      "layerId": "17899311642",
+      "trafficAllocation": [
+        { "entityId": "17870130722", "endOfRange": 5000 },
+        { "entityId": "17889461904", "endOfRange": 10000 }
+      ],
+      "forcedVariations": {}
+    },
+    {
+      "status": "Running",
+      "audienceIds": [],
+      "variations": [
+        { "variables": [], "id": "17884100309", "key": "control" },
+        { "variables": [], "id": "17905220097", "key": "treatment" }
+      ],
+      "id": "17887310992",
+      "key": "landing_page_design_test",
+      "layerId": "17891011577",
+      "trafficAllocation": [
+        { "entityId": "17884100309", "endOfRange": 5000 },
+        { "entityId": "17905220097", "endOfRange": 10000 }
+      ],
+      "forcedVariations": {}
+    }
+  ],
+  "audiences": [
+    {
+      "conditions": "[\"or\", {\"match\": \"exact\", \"name\": \"$opt_dummy_attribute\", \"type\": \"custom_attribute\", \"value\": \"$opt_dummy_value\"}]",
+      "id": "$opt_dummy_audience",
+      "name": "Optimizely-Generated Audience for Backwards Compatibility"
+    }
+  ],
+  "groups": [],
+  "attributes": [],
+  "botFiltering": false,
+  "events": [],
+  "revision": "12"
+}

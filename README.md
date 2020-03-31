@@ -1,17 +1,46 @@
-# 👷 `worker-template` Hello World
+# Optimizely Cloudflare Worker Testing
 
-A template for kick starting a Cloudflare worker project.
+A template for an Optimizely experimentation implementation with
+cloudflare workers.
 
-[`index.js`](https://github.com/cloudflare/worker-template/blob/master/index.js) is the content of the Workers script.
+It provides three separate optimizely experiments, available at
+the following routes (following the blog post: https://TODOHERE.COM):
 
-#### Wrangler
+It also provides code to read+set the anonymous_id cookie, so the
+experiment assigning is sticky.
 
-To generate using [wrangler](https://github.com/cloudflare/wrangler)
+An example optimizely datafile is provided with three experiments
+set to 50/50 based on user id.
 
-```
-wrangler generate projectname https://github.com/cloudflare/worker-template
-```
+`/infra`
+Varies the upstream host at a 50/50 split between:
 
-#### Serverless
+- https://k8s.opendoor.com/design-a
+- https://heroku.opendoor.com/design-a
 
-To deploy using serverless add a [`serverless.yml`](https://serverless.com/framework/docs/providers/cloudflare/) file.
+`/design`
+Varies the upstream path at a 50/50 split between:
+
+- https://k8s.opendoor.com/design-a
+- https://k8s.opendoor.com/design-b
+
+`/variation`
+Varies the upstream query parameter `headline` at a 50/50 split between:
+
+- https://k8s.opendoor.com/design-b?headline=My+original+headline
+- https://k8s.opendoor.com/design-b?headline=My+new+headline
+
+## How do I use with my own optimizely account?
+
+1. Set-up an optimizely full-stack project (or use a current one), and set-up experiments called `landing_page_{infra,design,variation}_test`
+2. Follow the comments in `index.js` for how to get the optimizely datafile from the optimizely cdn.
+
+## Questions, problems, clarifications?
+
+Open up an issue and we'll try to help you out.
+
+## Get started
+
+`yarn install`
+`yarn start`
+Visit `localhost:8787/{infra,design,variation}`
