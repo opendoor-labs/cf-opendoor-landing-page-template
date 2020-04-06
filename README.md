@@ -17,7 +17,7 @@ A template for an Optimizely experimentation implementation with
 cloudflare workers.
 
 It provides three separate optimizely experiments, available at
-the following routes (following the blog post: https://TODOHERE.COM):
+the following routes (following the blog post: https://medium.com/opendoor-labs/cloudflare-workers-opendoor-landing-page-infrastructure-824853a34551):
 
 It also provides code to read+set the anonymous_id cookie, so the
 experiment assigning is sticky.
