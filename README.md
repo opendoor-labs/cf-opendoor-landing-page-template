@@ -41,6 +41,6 @@ Open up an issue and we'll try to help you out.
 
 ## Get started
 
-`yarn install`
-`yarn start`
+`npm install`
+`npm start`
 Visit `localhost:8787/{infra,design,variation}`
