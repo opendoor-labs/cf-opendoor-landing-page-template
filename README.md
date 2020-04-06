@@ -1,5 +1,7 @@
 # Optimizely Cloudflare Worker Testing
 
+Code related to: https://medium.com/opendoor-labs/cloudflare-workers-opendoor-landing-page-infrastructure-824853a34551
+
 ## Quickstart
 
 ```
