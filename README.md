@@ -1,5 +1,16 @@
 # Optimizely Cloudflare Worker Testing
 
+## Quickstart
+
+```
+npm i @cloudflare/wrangler -g
+wrangler generate optimizely-example-app https://github.com/opendoor-labs/cf-opendoor-landing-page-template
+cd optimizely-example-app
+npm install && npm start
+```
+
+## Background
+
 A template for an Optimizely experimentation implementation with
 cloudflare workers.
 
